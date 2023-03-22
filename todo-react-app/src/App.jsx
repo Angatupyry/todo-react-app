@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 
-const todos = [
+const data = [
   { id: 1, content: "Tomar agua", completed: true },
   { id: 2, content: "Finalizar práctica de estados y props", completed: false },
   { id: 3, content: "Tomar agua", completed: false },
@@ -20,13 +20,14 @@ const todos = [
 
 function App() {
   const [themeLight, setThemeLight] = useState(true);
+  const [todos, setTodos] = useState(data);
 
   return (
     <div className={`wrapper ${themeLight ? "light" : "dark"}`}>
       <div className="container">
         <Header themeLight={themeLight} setThemeLight={setThemeLight} />
         <main>
-          <TodoForm />
+          <TodoForm todos={todos} setTodos={setTodos} />
           <TodoList todos={todos} />
         </main>
         <Footer />
