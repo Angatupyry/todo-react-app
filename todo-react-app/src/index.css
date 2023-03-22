@@ -97,6 +97,70 @@ h1 {
   color: var(--color-dark-very-dark-grayish-blue-hover);
 }
 
+/* TodoForm Component */
+.form-control {
+  background-color: white;
+  width: 100%;
+  height: 6.4rem;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  padding: 2.4rem;
+  gap: 2.4rem;
+  border-radius: 1rem;
+  margin-bottom: 2.4rem;
+}
+.wrapper.dark .form-control {
+  background-color: var(--color-very-dark-desaturated-blue);
+}
+.checkbox-border-wrap {
+  padding: 0.1rem;
+  background: var(--color-very-light-grayish-blue);
+  border-radius: 50%;
+}
+.wrapper.dark .checkbox-border-wrap {
+  background: var(--color-dark-very-dark-grayish-blue);
+}
+.checkbox-border-wrap:hover {
+  background: linear-gradient(
+    to bottom right,
+    var(--color-gradient-start),
+    var(--color-gradient-end)
+  );
+}
+.checkbox {
+  display: flex;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: inherit;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.wrapper.dark .checkbox,
+.wrapper.dark .todo-input {
+  background-color: var(--color-very-dark-desaturated-blue);
+}
+
+.form-control form {
+  width: 100%;
+}
+.form-control form label,
+#submitNewTodo {
+  display: none;
+}
+.todo-input {
+  font-size: 1.8rem;
+  border: none;
+}
+.todo-input:focus {
+  outline: none;
+}
+.form-control form .todo-input {
+  width: 100%;
+}
+
 /* Footer Component */
 footer {
   line-height: 1.5;
@@ -108,3 +172,4 @@ a {
 a:visited {
   color: var(--color-light-grayish-blue);
 }
+

@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./index.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import TodoForm from "./components/TodoForm";
 
 function App() {
   const [themeLight, setThemeLight] = useState(true);
@@ -10,7 +11,9 @@ function App() {
     <div className={`wrapper ${themeLight ? "light" : "dark"}`}>
       <div className="container">
         <Header themeLight={themeLight} setThemeLight={setThemeLight} />
-        <main></main>
+        <main>
+          <TodoForm />
+        </main>
         <Footer />
       </div>
     </div>
