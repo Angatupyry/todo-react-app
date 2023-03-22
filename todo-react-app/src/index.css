@@ -96,3 +96,15 @@ h1 {
 .wrapper.dark .btn:hover {
   color: var(--color-dark-very-dark-grayish-blue-hover);
 }
+
+/* Footer Component */
+footer {
+  line-height: 1.5;
+  text-align: center;
+}
+a {
+  color: var(--color-gradient-end);
+}
+a:visited {
+  color: var(--color-light-grayish-blue);
+}
