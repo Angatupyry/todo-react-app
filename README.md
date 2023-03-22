@@ -22,3 +22,5 @@ pnpm create vite my-react-app --template react
 ## Día 2
 
 - Copiar los recursos a utilizar en el proyecto
+- Agregar el header en App.jsx
+- Estilizar el header
