@@ -28,7 +28,7 @@ function App() {
         <Header themeLight={themeLight} setThemeLight={setThemeLight} />
         <main>
           <TodoForm todos={todos} setTodos={setTodos} />
-          <TodoList todos={todos} />
+          <TodoList todos={todos} setTodos={setTodos} />
         </main>
         <Footer />
       </div>

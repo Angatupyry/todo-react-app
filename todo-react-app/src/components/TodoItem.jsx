@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import IconCheck from "../assets/images/icon-check.svg";
 
-const TodoItem = ({ todo }) => {
+const TodoItem = ({ todo, todos, setTodos }) => {
   const [mutableTodo, setMutableTodo] = useState(todo);
 
   const toggleCompleted = () => {
     setMutableTodo({ ...mutableTodo, completed: !mutableTodo.completed });
+    const updatedTodos = todos.map((item) =>
+      item.id === todo.id ? { ...item, completed: !item.completed } : item
+    );
+    setTodos(updatedTodos);
   };
 
   return (
