@@ -18,3 +18,7 @@ yarn create vite my-react-app --template react
 ### pnpm
 
 pnpm create vite my-react-app --template react
+
+## Día 2
+
+- Copiar los recursos a utilizar en el proyecto
