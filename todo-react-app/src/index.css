@@ -46,6 +46,7 @@ button {
   padding-bottom: 5rem;
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: contain;
 }
 /* Theme LIGHT */
 .wrapper.light {
@@ -257,3 +258,44 @@ a:visited {
   color: var(--color-light-grayish-blue);
 }
 
+/**
+ * For MOBILE
+ */
+@media screen and (max-width: 600px) {
+  .wrapper {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+  .wrapper.light {
+    background-image: url(./pics/bg-mobile-light.jpg);
+  }
+  .todo-list-section {
+    margin-bottom: 2.4rem;
+  }
+  .todo-filter-control .filter-control-for-desktop {
+    display: none;
+  }
+  .filter-control-for-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2.4rem;
+    box-shadow: -1px 5px 20px 10px rgba(157, 162, 235, 0.3);
+    -webkit-box-shadow: -1px 5px 20px 10px rgba(157, 162, 235, 0.3);
+    -moz-box-shadow: -1px 5px 20px 10px rgba(157, 162, 235, 0.3);
+    margin-bottom: 4.8rem;
+  }
+
+  /* Dark Theme */
+  .wrapper.dark {
+    background-image: url(./pics/bg-mobile-dark.jpg);
+  }
+  .wrapper.dark .filter-control-for-mobile {
+    background-color: var(--color-very-dark-desaturated-blue);
+    box-shadow: -1px 5px 20px 10px rgba(37, 39, 60, 0.2);
+    -webkit-box-shadow: -1px 5px 20px 10px rgba(37, 39, 60, 0.2);
+    -moz-box-shadow: -1px 5px 20px 10px rgba(37, 39, 60, 0.2);
+  }
+}

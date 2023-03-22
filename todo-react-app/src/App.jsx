@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./index.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -21,6 +21,24 @@ const data = [
 function App() {
   const [themeLight, setThemeLight] = useState(true);
   const [todos, setTodos] = useState(data);
+  const [filterStatus, setFilterStatus] = useState("all");
+  const [filteredTodos, setFilteredTodos] = useState(todos);
+
+  useEffect(() => {
+    const handleFilter = () => {
+      switch (filterStatus) {
+        case "active":
+          return setFilteredTodos(todos.filter((todo) => !todo.completed));
+
+        case "completed":
+          return setFilteredTodos(todos.filter((todo) => todo.completed));
+
+        default:
+          return setFilteredTodos(todos);
+      }
+    };
+    handleFilter();
+  }, [todos, filterStatus]);
 
   return (
     <div className={`wrapper ${themeLight ? "light" : "dark"}`}>
@@ -28,7 +46,13 @@ function App() {
         <Header themeLight={themeLight} setThemeLight={setThemeLight} />
         <main>
           <TodoForm todos={todos} setTodos={setTodos} />
-          <TodoList todos={todos} setTodos={setTodos} />
+          <TodoList
+            todos={todos}
+            setTodos={setTodos}
+            filteredTodos={filteredTodos}
+            filterStatus={filterStatus}
+            setFilterStatus={setFilterStatus}
+          />
         </main>
         <Footer />
       </div>
