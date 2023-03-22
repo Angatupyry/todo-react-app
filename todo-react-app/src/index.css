@@ -58,6 +58,13 @@ button {
   color: var(--color-dark-grayish-blue);
 }
 
+/* Theme DARK */
+.wrapper.dark {
+  background-color: var(--color-very-dark-blue);
+  background-image: url(./assets/images/bg-desktop-dark.jpg);
+  color: var(--color-dark-dark-grayish-blue);
+}
+
 .container {
   max-width: 54rem;
   margin: 0 auto;
